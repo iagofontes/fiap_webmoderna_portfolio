@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #b300b3;">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #4c00e6;">
         <a class="navbar-brand" href="#">Iago Fontes</a>
         <button class="navbar-toggler" type="button" 
             data-toggle="collapse" data-target="#navbarNav" 
@@ -23,26 +23,24 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
             <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                <!-- <a class="nav-link" href="#divHome">Home <span class="sr-only">(current)</span></a> -->
+                <a class="nav-link" href="#divHome">Home</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Tecnologias</a>
+            <li class="nav-item active">
+                <a class="nav-link" href="#divTecnologias">Tecnologias</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Experiências</a>
+            <li class="nav-item active">
+                <a class="nav-link" href="#divExperiencias">Experiências</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Sobre</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Contato</a>
+            <li class="nav-item active">
+                <a class="nav-link" href="#divContato">Contato</a>
             </li>
             </ul>
         </div>
     </nav>
-
-    <main class="container">
-        <div class="row align-items-center" style="padding-top: 2em;">
+    <main data-spy="scroll" class="container">
+        <!-- <div class="row align-items-center" style="padding-top: 5em;" id="divHome"> -->
+        <div class="row align-items-center" style="padding-top: 5em;" id="divHome">
             <div class="col-12 col-md-6 text-center">
                 <img src="img/img-perfil.jpg" 
                     alt="Imagem de perfil" 
@@ -70,10 +68,147 @@
             </div>
         </div>
         <hr>
-        <div class="row align-items-center" style="padding-top: 2em;">
+        <div class="row align-items-center" style="padding-top: 5em;" id="divTecnologias">
+            <div class="col-12 text-center">
+                <h2>Tecnologias</h2>
+            </div>
             <div class="col-12 text-center">
                 <p>Aqui estão algumas das tecnologias com as quais eu já tive algum contato:</p>
             </div>
+            <div class="col-12 text-center">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-4">
+                        <div class="card border border-warning">
+                            <img class="card-img-top img-fluid" src="img/javascript.png" alt="JavaScript">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="card border border-info">
+                            <img class="card-img-top img-fluid" src="img/typescript.png" alt="TypeScript">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="card border border-info">
+                            <img class="card-img-top img-fluid" src="img/node.png" alt="Nodejs">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="card border border-info">
+                            <img class="card-img-top img-fluid" src="img/ionic.png" alt="Ionic 2">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="card border border-danger">
+                            <img class="card-img-top img-fluid" src="img/angular.png" alt="Angular">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="card border border-danger">
+                            <img class="card-img-top img-fluid" src="img/java.png" alt="Java">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="card border border-primary">
+                            <img class="card-img-top img-fluid" src="img/php.png" alt="PHP">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="card border border-danger">
+                            <img class="card-img-top img-fluid" src="img/delphi.png" alt="Delphi">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row align-items-center" style="padding-top: 5em;" id="divExperiencias">
+            <div class="col-12 text-center">
+                <h2>Experiências</h2>
+            </div>
+            <div class="col-12 text-center">
+                <p>Minhas experiências profissionais são breves, trabalho em meu primeiro emprego até os dias atuais, porém já trabalhei com as diversas tecnologias citadas acima.</p>
+                <p>Logo abaixo apresento um pouco sobre a empresa.</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-8 text-center">
+                    <div class="card">
+                        <img class="card-img-top img-fluid" style="padding: 1em;" src="img/urgtec.png" alt="Urgtec">
+                        <div class="card-body">
+                            <p class="card-text">A Urgtec é uma empresa que cria software para laboratórios de protese dentária. A empresa encontra-se no mercado por volta de 30 anos, atendendo ao ramo de laboratórios protéticos. Atualmente nos encontramos na fase de transição, partindo para desenvolvimento de aplicações mobile e WebServices para gerenciar as requisições.</p>
+                            <p>Por fim, estamos em fase de constante crescimento. Atualmente a empresa é líder de mercado.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row justify-content-center" style="padding-top: 5em;" id="divContato">
+            <div class="col-12 text-center">
+                <h2>Contato</h2>
+            </div>
+            <div class="col-12 text-center">
+                <p>Para entrar em contato, preencha o formulário e este será enviado via e-mail</p>
+            </div>
+            <!-- <div class="alert alert-warning alert-dismissible fade hide" role="alert">
+                <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div> -->
+            <!-- <div class="row justify-content-center"> -->
+                <div class="col-8 text-center">
+                    <div class="card">
+                        <div class="card-header">
+                            Contato
+                        </div>
+                        <div class="card-body text-left">
+                            <form method="post" action="mailto:iagofontes@hotmail.com">
+                                <div class="form-group">
+                                    <label for="lblNome">Nome</label>
+                                    <input type="text" class="form-control" id="txtNome" aria-describedby="nameInput" placeholder="Digite seu nome">
+                                    <small id="nameInput" class="form-text text-muted">Digite seu nome.</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lblEmail">Email</label>
+                                    <input type="email" class="form-control" id="txtEmail" aria-describedby="emailHelp" placeholder="Digite seu e-mail">
+                                    <small id="emailHelp" class="form-text text-muted">Informe seu e-mail.</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lblMessage">Mensagem</label>
+                                    <textarea class="form-control" id="txtMensagem" rows="3"></textarea>
+                                </div>
+                                <div class="col-12 text-center">
+                                    <a href="#" id="btnEnviarMensagem" class="btn btn-primary" alt="Enviar mensagem">Enviar</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            <!-- </div> -->
         </div>
         <hr>
     </main>
@@ -91,5 +226,15 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" 
         integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" 
         crossorigin="anonymous"></script>
+    <script>
+        $('#divHome').height(($(window).height())-(($(window).height())*0.1));
+
+        $('#btnEnviarMensagem').click((ev)=>{
+            ev.preventDefault();
+            // alert('Enviar mensagem');
+            $('.alert').alert();
+        });
+        $('.alert').animate({top:"0"}, 500);
+    </script>
 </body>
 </html>

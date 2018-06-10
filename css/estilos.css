@@ -2,3 +2,12 @@
     width: 400px;
     height: 400px;
 }
+
+.card {
+    height: 30em;
+    margin: 2em auto;
+}
+
+.card-img-top {
+    height: 20em;
+}
