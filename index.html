@@ -173,12 +173,14 @@
             <div class="col-12 text-center">
                 <p>Para entrar em contato, preencha o formulário e este será enviado via e-mail</p>
             </div>
-            <!-- <div class="alert alert-warning alert-dismissible fade hide" role="alert">
-                <strong>Holy guacamole!</strong> You should check in on some of those fields below.
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div> -->
+            <div class="col-8">
+                <div id="alertMessage" class="alert alert-success alert-dismissible fade show" role="alert">
+                    <span><strong id="messageField">Mensagem</strong></span>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
             <!-- <div class="row justify-content-center"> -->
                 <div class="col-8 text-center">
                     <div class="card">
@@ -232,9 +234,53 @@
         $('#btnEnviarMensagem').click((ev)=>{
             ev.preventDefault();
             // alert('Enviar mensagem');
-            $('.alert').alert();
+            //$('.alert').alert();
+            sendMessage();
         });
-        $('.alert').animate({top:"0"}, 500);
+
+        function sendMessage() {
+            let nome = document.getElementById('txtNome').value;
+            let email = document.getElementById('txtEmail').value;
+            let message = document.getElementById('txtMensagem').textContent;
+
+            if(checkValuesMessage(nome, email, message)) {
+                showMessage(`Olá ${nome.toString().substr(0, nome.toString().search(/ /g))}\nSua mensagem será enviada em breve.`, 'success');
+            } else {
+                showMessage('Dados inválidos para envio de mensagem.', 'error');
+            }
+        }
+
+        function checkValuesMessage(name, email, message) {
+            return (isValid(name) && isValid(email) && isValid(message));
+        }
+
+        function isValid(element) {
+            return ((element != undefined) && (element != null) && (element != false));
+        }
+
+        function showMessage(message, type) {
+            //let alert = document.getElementById('alertMessage');
+            let messageField = document.getElementById('messageField');
+            if(type == 'success')
+                setMessageSuccess();
+            else 
+                setMessageError();
+            messageField.textContent = message;
+            $('.alert').alert();
+        }
+
+        function setMessageError() {
+            let alert = document.querySelector('#alertMessage');
+            alert.classList.remove('alert-success');
+            alert.classList.add('alert-danger');
+        }
+
+        function setMessageSuccess() {
+            let alert = document.querySelector('#alertMessage');
+            alert.classList.remove('alert-danger');
+            alert.classList.add('alert-success');
+        }
+        //$('.alert').animate({top:"0"}, 500);
     </script>
 </body>
 </html>
