@@ -11,3 +11,11 @@
 .card-img-top {
     height: 20em;
 }
+
+.hidden {
+    display: none;
+}
+
+.appear {
+    display: block;
+}
